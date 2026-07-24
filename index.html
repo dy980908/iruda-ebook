@@ -1,92 +1,180 @@
 <!doctype html>
-<!--[if lt IE 7 ]> <html lang="en" class="ie6"> <![endif]-->
-<!--[if IE 7 ]>    <html lang="en" class="ie7"> <![endif]-->
-<!--[if IE 8 ]>    <html lang="en" class="ie8"> <![endif]-->
-<!--[if IE 9 ]>    <html lang="en" class="ie9"> <![endif]-->
-<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+<html lang="en">
+
 <head>
-<meta name="viewport" content="width = 1050, user-scalable = no" />
-<script type="text/javascript" src="./extras/jquery.min.1.7.js"></script>
-<script type="text/javascript" src="./extras/modernizr.2.5.3.min.js"></script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<script type="text/javascript" src="./extras/jquery.min.1.7.js"></script>
+	<script type="text/javascript" src="./extras/modernizr.2.5.3.min.js"></script>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+
+	<link rel="icon" href="/pages/favicon.ico">
+	<link rel="icon" href="/pages/favicon.ico" type="image/x-icon" sizes="16x16">
+
 </head>
+
 <body>
 	<img class="bg" src="./pages/bg.png" alt="">
-	<h5>모서리를 넘겨 페이지를 이동해보세요</h5>
+	<h5>클릭 또는 방향키로 페이지를 넘겨보세요</h5>
 
-<div class="flipbook-viewport">
-	<div class="container">
-		<!-- <div class="ring"> <img src="./pages/ring.png" alt=""></div> -->
-		<div class="flipbook">
-			<div style="background-image:url(pages/1.jpg)"></div>
-			<div style="background-image:url(pages/2.jpg)"></div>
-			<div style="background-image:url(pages/3.jpg)"></div>
-			<div style="background-image:url(pages/4.jpg)"></div>
-			<div style="background-image:url(pages/5.jpg)"></div>
-			<div style="background-image:url(pages/6.jpg)"></div>
-			<div style="background-image:url(pages/7.jpg)"></div>
-			<div style="background-image:url(pages/8.jpg)"></div>
-			<div style="background-image:url(pages/9.jpg)"></div>
-			<div style="background-image:url(pages/10.jpg)"></div>
-			<div style="background-image:url(pages/11.jpg)"></div>
-			<div style="background-image:url(pages/12.jpg)"></div>
-			<div style="background-image:url(pages/13.jpg)"></div>
-			<div style="background-image:url(pages/14.jpg)"></div>
-			<div style="background-image:url(pages/15.jpg)"></div>
-			<div style="background-image:url(pages/16.jpg)"></div>
-			<div style="background-image:url(pages/17.jpg)"></div>
-			<div style="background-image:url(pages/18.jpg)"></div>
-			<div style="background-image:url(pages/19.jpg)"></div>
-			<div style="background-image:url(pages/20.jpg)"></div>
-			<div style="background-image:url(pages/21.jpg)"></div>
-			<div style="background-image:url(pages/22.jpg)"></div>
-			<div style="background-image:url(pages/23.jpg)"></div>
-			<div style="background-image:url(pages/24.jpg)"></div>
-			<div style="background-image:url(pages/25.jpg)"></div>
-			<div style="background-image:url(pages/26.jpg)"></div>
-			<div style="background-image:url(pages/27.jpg)"></div>
-			<div style="background-image:url(pages/28.jpg)"></div>
+	<div class="flipbook-viewport">
+		<div class="container">
+			<div class="flipbook">
+				<div style="background-image:url(pages/1.jpg)"></div>
+				<div style="background-image:url(pages/2.jpg)"></div>
+				<div style="background-image:url(pages/3.jpg)"></div>
+				<div style="background-image:url(pages/4.jpg)"></div>
+				<div style="background-image:url(pages/5.jpg)"></div>
+				<div style="background-image:url(pages/6.jpg)"></div>
+				<div style="background-image:url(pages/7.jpg)"></div>
+				<div style="background-image:url(pages/8.jpg)"></div>
+				<div style="background-image:url(pages/9.jpg)"></div>
+				<div style="background-image:url(pages/10.jpg)"></div>
+				<div style="background-image:url(pages/11.jpg)"></div>
+				<div style="background-image:url(pages/12.jpg)"></div>
+				<div style="background-image:url(pages/13.jpg)"></div>
+				<div style="background-image:url(pages/14.jpg)"></div>
+				<div style="background-image:url(pages/15.jpg)"></div>
+				<div style="background-image:url(pages/16.jpg)"></div>
+				<div style="background-image:url(pages/17.jpg)"></div>
+				<div style="background-image:url(pages/18.jpg)"></div>
+				<div style="background-image:url(pages/19.jpg)"></div>
+				<div style="background-image:url(pages/20.jpg)"></div>
+				<div style="background-image:url(pages/21.jpg)"></div>
+				<div style="background-image:url(pages/22.jpg)"></div>
+				<div style="background-image:url(pages/23.jpg)"></div>
+				<div style="background-image:url(pages/24.jpg)"></div>
+				<div style="background-image:url(pages/25.jpg)"></div>
+				<div style="background-image:url(pages/26.jpg)"></div>
+				<div style="background-image:url(pages/27.jpg)"></div>
+				<div style="background-image:url(pages/28.jpg)"></div>
+			</div>
 		</div>
 	</div>
-</div>
 
+
+<script type="text/javascript" src="./js/basic.js"></script>
 
 <script type="text/javascript">
-
-function loadApp() {
-
-	$('.flipbook').turn({
-		width:922,
-		height:600,
-		elevation: 50,
-		gradients: true,
-		autoCenter: true
-	});
-
-	// 👉 페이지 변경 감지
-	$('.flipbook').bind('turned', function(e, page) {
-
-		if(page === 1){
-			$('h5').removeClass('hide');
-		}else{
-			$('h5').addClass('hide');
-		}
-
-	});
-}
-
-// turn.js 로드 후 실행 (한 번만!)
 yepnope({
-	test : Modernizr.csstransforms,
+	test: Modernizr.csstransforms,
 	yep: ['./lib/turn.js'],
 	nope: ['./lib/turn.html4.min.js'],
 	both: ['./css/basic.css'],
-	complete: loadApp
-});
 
+	complete: function () {
+
+		/* 기존 플립북 실행 */
+		loadApp();
+
+		var BOOK_WIDTH = 922;
+		var BOOK_HEIGHT = 600;
+
+		function resizeBook() {
+
+			var windowWidth = window.innerWidth;
+			var windowHeight = window.innerHeight;
+
+			/* 화면 가장자리 여백 */
+			var sidePadding = 24;
+			var topBottomPadding = 150;
+
+			/* 가로 기준 축소 비율 */
+			var widthScale =
+				(windowWidth - sidePadding) / BOOK_WIDTH;
+
+			/* 세로 기준 축소 비율 */
+			var heightScale =
+				(windowHeight - topBottomPadding) / BOOK_HEIGHT;
+
+			/* 가로와 세로 중 더 작은 값 적용 */
+			var scale = Math.min(
+				widthScale,
+				heightScale,
+				1
+			);
+
+			/* 지나치게 작아지는 것 방지 */
+			if (scale < 0.25) {
+				scale = 0.25;
+			}
+
+			var $container =
+				$('.flipbook-viewport .container');
+
+			$container.css({
+				transform: 'scale(' + scale + ')',
+				'-webkit-transform': 'scale(' + scale + ')'
+			});
+
+			/*
+			 * 실제 축소된 책 높이
+			 */
+			var scaledBookHeight = BOOK_HEIGHT * scale;
+
+			/*
+			 * 책의 화면상 중심 위치
+			 */
+			var bookCenterY = windowHeight * 0.56;
+
+			/*
+			 * 책 상단 위치
+			 */
+			var bookTop =
+				bookCenterY - scaledBookHeight / 2;
+
+			/*
+			 * 안내문을 책 바로 위에 배치
+			 */
+			var guideGap = Math.max(
+				18,
+				scaledBookHeight * 0.08
+			);
+
+			var guideTop =
+				bookTop - guideGap - 25;
+
+			if (guideTop < 15) {
+				guideTop = 15;
+			}
+
+			$('h5').css('top', guideTop + 'px');
+		}
+
+		/* 최초 실행 */
+		resizeBook();
+
+		/* 창 크기 변경 */
+		$(window).bind(
+			'resize orientationchange',
+			function () {
+				resizeBook();
+			}
+		);
+
+		/* 키보드 방향키 페이지 이동 */
+		$(document).bind('keydown', function (e) {
+
+			var $flipbook = $('.flipbook');
+
+			if (e.keyCode === 37) {
+				e.preventDefault();
+				$flipbook.turn('previous');
+			}
+
+			if (e.keyCode === 39) {
+				e.preventDefault();
+				$flipbook.turn('next');
+			}
+		});
+	}
+});
 </script>
 
 </body>
+
 </html>

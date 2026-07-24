@@ -1,123 +1,138 @@
-html, body{
-	overflow-x: hidden !important;
+html,
+body {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	min-width: 0;
+	margin: 0;
+	padding: 0;
+	overflow: hidden !important;
+	overscroll-behavior: none;
 }
 
-body{
-	overflow:hidden;
-	background-color:#fcfcfc;
-	margin:0;
-	padding:0;
-	overflow-x: hidden;
+body {
+	background-color: #fcfcfc;
 }
 
-h5{
-	color: #ffffffcc;
-	font-size: 20px;
-	margin: 20vh auto 0;
+/* 배경 */
+.bg {
+	position: fixed;
+	inset: 0;
+	width: 100vw;
+	height: 100dvh;
+	object-fit: cover;
+	z-index: -1;
+	pointer-events: none;
+}
+
+/* 전체 화면 영역 */
+.flipbook-viewport {
+	position: fixed;
+	inset: 0;
+	width: 100vw;
+	height: 100dvh;
+	overflow: hidden !important;
+}
+
+/*
+책 중심 위치
+
+--book-scale은 JavaScript에서 화면 크기에 따라 자동 계산
+*/
+.flipbook-viewport .container {
+	position: absolute;
+	top: 56%;
+	left: 50%;
+
+	width: 922px;
+	height: 600px;
+
+	margin-left: -461px;
+	margin-top: -300px;
+
+	transform: scale(1);
+	-webkit-transform: scale(1);
+
+	transform-origin: center center;
+	-webkit-transform-origin: center center;
+
+	will-change: transform;
+}
+
+/* 책 */
+.flipbook-viewport .flipbook {
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	width: 922px;
+	height: 600px;
+}
+
+/* 안내문 */
+h5 {
+	position: fixed;
+	left: 0;
+	top: var(--guide-top, 10%);
+
+	z-index: 100;
+
+	width: 100%;
+	margin: 0;
+	padding: 0 15px;
+	box-sizing: border-box;
+
+	color: rgba(255, 255, 255, 0.8);
+	font-size: clamp(14px, 1.5vw, 20px);
+	line-height: 1.4;
 	text-align: center;
+
 	font-family: "Noto Serif KR", serif;
 	font-weight: 300;
 
 	opacity: 1;
 	transition: opacity 0.3s ease;
+	pointer-events: none;
 }
 
-h5.hide{
+h5.hide {
 	opacity: 0;
 }
 
-.bg{
-	position:fixed;
-	top:0;
-	left:0;
-	width:100%;
-	height:100%;
-	object-fit:cover; /* 👉 꽉 채움 */
-	z-index:-1;
-	overflow: hidden;
+/* 각각의 페이지 */
+.flipbook-viewport .page {
+	width: 461px;
+	height: 600px;
+	background-color: white;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	cursor: pointer;
 }
 
-
-.flipbook-viewport{
-	overflow:hidden;
-	width:100%;
-	height:100%;
+.flipbook .page {
+	-webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
-.ring{
-	position: absolute;
-	z-index: 999;
-	top: -320px;
-	left: -60px;
-	height: 600px;;
-
-}
-.flipbook-viewport .container{
-	position:absolute;
-	top:50%;
-	left:50%;
-	margin:auto;
-}
-
-.flipbook-viewport .flipbook{
-	width:922px;
-	height:600px;
-	left:-461px;
-	top:-300px;
-}
-
-.flipbook-viewport .page{
-	width:461px;
-	height:600px;
-	background-color:white;
-	background-repeat:no-repeat;
-	background-size:100% 100%;
-}
-
-.flipbook .page{
-	-webkit-box-shadow:0 0 20px rgba(0,0,0,0.2);
-	-moz-box-shadow:0 0 20px rgba(0,0,0,0.2);
-	-ms-box-shadow:0 0 20px rgba(0,0,0,0.2);
-	-o-box-shadow:0 0 20px rgba(0,0,0,0.2);
-	box-shadow:0 0 20px rgba(0,0,0,0.2);
-}
-
-.flipbook-viewport .page img{
+.flipbook-viewport .page img {
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
-	-khtml-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
-	margin:0;
+	margin: 0;
 }
 
-.flipbook-viewport .shadow{
+.flipbook-viewport .shadow {
 	-webkit-transition: -webkit-box-shadow 0.5s;
 	-moz-transition: -moz-box-shadow 0.5s;
-	-o-transition: -webkit-box-shadow 0.5s;
-	-ms-transition: -ms-box-shadow 0.5s;
+	transition: box-shadow 0.5s;
 
-	-webkit-box-shadow:0 0 20px #222;
-	-moz-box-shadow:0 0 20px #222;
-	-o-box-shadow:0 0 20px #222;
-	-ms-box-shadow:0 0 20px #222;
-	box-shadow:0 0 20px #222;
+	-webkit-box-shadow: 0 0 20px #222;
+	-moz-box-shadow: 0 0 20px #222;
+	box-shadow: 0 0 20px #222;
 }
 
-
-
-@media (max-width: 1024px){
-	h5{
-		margin-top: 18vh;
-		font-size: 18px;
-	}
-}
-
-/* 모바일 */
-@media (max-width: 768px){
-	h5{
-		margin-top: 15vh;
-		font-size: 16px;
-	}
-}
